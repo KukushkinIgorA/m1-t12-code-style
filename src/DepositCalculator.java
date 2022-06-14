@@ -5,7 +5,7 @@ public class DepositCalculator {
     public static final double DEPOSIT_PERCENT = 0.06;
     public static final int COUNT_MONTH_IN_YEAR = 12;
 
-    double calculateComplexPercent(double depositAmmount, int depositPeriod ) {
+    double calculateComplexPercent(double depositAmmount, int depositPeriod) {
         double depositOutAmmount = depositAmmount * Math.pow((1 + DEPOSIT_PERCENT / COUNT_MONTH_IN_YEAR), COUNT_MONTH_IN_YEAR * depositPeriod);
         return roundPercent(depositOutAmmount);
     }
@@ -16,8 +16,8 @@ public class DepositCalculator {
     }
 
     double roundPercent(double depositOutAmmount) {
-       double ScaLe = Math.pow(10, 2);
-       return Math.round(depositOutAmmount*ScaLe)/ScaLe;
+        double ScaLe = Math.pow(10, 2);
+        return Math.round(depositOutAmmount * ScaLe) / ScaLe;
     }
 
     void calculateDeposit() {
@@ -26,7 +26,7 @@ public class DepositCalculator {
         int depositAmmount;
         double depositOutAmmount = 0;
 
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите сумму вклада в рублях:");
         depositAmmount = scanner.nextInt();
         System.out.println("Введите срок вклада в годах:");
